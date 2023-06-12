@@ -43,7 +43,6 @@ namespace MapProject
             this.label1 = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
             this.movieDescription = new System.Windows.Forms.RichTextBox();
-            this.locationDescription = new System.Windows.Forms.RichTextBox();
             this.producerLabel = new System.Windows.Forms.Label();
             this.genreLabel = new System.Windows.Forms.Label();
             this.yearLabel = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@ namespace MapProject
             this.satelliteSwitch = new System.Windows.Forms.Button();
             this.zoomSwitch = new System.Windows.Forms.Button();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.locationDescription = new System.Windows.Forms.RichTextBox();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapPicture)).BeginInit();
             this.SuspendLayout();
@@ -72,15 +72,15 @@ namespace MapProject
             // 
             // infoPanel
             // 
-            this.infoPanel.Controls.Add(this.movieDescription);
             this.infoPanel.Controls.Add(this.locationDescription);
+            this.infoPanel.Controls.Add(this.movieDescription);
             this.infoPanel.Controls.Add(this.producerLabel);
             this.infoPanel.Controls.Add(this.genreLabel);
             this.infoPanel.Controls.Add(this.yearLabel);
             this.infoPanel.Controls.Add(this.titleLabel);
-            this.infoPanel.Location = new System.Drawing.Point(518, 12);
+            this.infoPanel.Location = new System.Drawing.Point(547, 12);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(302, 436);
+            this.infoPanel.Size = new System.Drawing.Size(351, 380);
             this.infoPanel.TabIndex = 6;
             // 
             // movieDescription
@@ -88,18 +88,9 @@ namespace MapProject
             this.movieDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.movieDescription.Location = new System.Drawing.Point(9, 109);
             this.movieDescription.Name = "movieDescription";
-            this.movieDescription.Size = new System.Drawing.Size(284, 160);
+            this.movieDescription.Size = new System.Drawing.Size(339, 129);
             this.movieDescription.TabIndex = 13;
             this.movieDescription.Text = "Описание фильма";
-            // 
-            // locationDescription
-            // 
-            this.locationDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.locationDescription.Location = new System.Drawing.Point(9, 271);
-            this.locationDescription.Name = "locationDescription";
-            this.locationDescription.Size = new System.Drawing.Size(284, 160);
-            this.locationDescription.TabIndex = 12;
-            this.locationDescription.Text = "Описание локации";
             // 
             // producerLabel
             // 
@@ -156,7 +147,7 @@ namespace MapProject
             // 
             this.adminPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminPanelButton.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adminPanelButton.Location = new System.Drawing.Point(382, 415);
+            this.adminPanelButton.Location = new System.Drawing.Point(411, 359);
             this.adminPanelButton.Name = "adminPanelButton";
             this.adminPanelButton.Size = new System.Drawing.Size(130, 33);
             this.adminPanelButton.TabIndex = 0;
@@ -170,7 +161,7 @@ namespace MapProject
             this.mapPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mapPicture.Location = new System.Drawing.Point(12, 43);
             this.mapPicture.Name = "mapPicture";
-            this.mapPicture.Size = new System.Drawing.Size(500, 405);
+            this.mapPicture.Size = new System.Drawing.Size(529, 349);
             this.mapPicture.TabIndex = 8;
             this.mapPicture.TabStop = false;
             // 
@@ -193,7 +184,7 @@ namespace MapProject
             // 
             this.satelliteSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.satelliteSwitch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.satelliteSwitch.Location = new System.Drawing.Point(12, 415);
+            this.satelliteSwitch.Location = new System.Drawing.Point(12, 359);
             this.satelliteSwitch.Name = "satelliteSwitch";
             this.satelliteSwitch.Size = new System.Drawing.Size(130, 33);
             this.satelliteSwitch.TabIndex = 9;
@@ -206,7 +197,7 @@ namespace MapProject
             // 
             this.zoomSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zoomSwitch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.zoomSwitch.Location = new System.Drawing.Point(202, 415);
+            this.zoomSwitch.Location = new System.Drawing.Point(202, 359);
             this.zoomSwitch.Name = "zoomSwitch";
             this.zoomSwitch.Size = new System.Drawing.Size(130, 33);
             this.zoomSwitch.TabIndex = 10;
@@ -223,7 +214,7 @@ namespace MapProject
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(12, 43);
+            this.gMapControl1.Location = new System.Drawing.Point(17, 43);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -241,11 +232,20 @@ namespace MapProject
             this.gMapControl1.TabIndex = 14;
             this.gMapControl1.Zoom = 0D;
             // 
+            // locationDescription
+            // 
+            this.locationDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.locationDescription.Location = new System.Drawing.Point(9, 244);
+            this.locationDescription.Name = "locationDescription";
+            this.locationDescription.Size = new System.Drawing.Size(339, 129);
+            this.locationDescription.TabIndex = 14;
+            this.locationDescription.Text = "Описание места съёмок";
+            // 
             // MapPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 460);
+            this.ClientSize = new System.Drawing.Size(910, 555);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.zoomSwitch);
             this.Controls.Add(this.satelliteSwitch);
@@ -284,7 +284,6 @@ namespace MapProject
         private System.Windows.Forms.Label label1;
         private Panel infoPanel;
         private RichTextBox movieDescription;
-        private RichTextBox locationDescription;
         private Label producerLabel;
         private Label genreLabel;
         private Label yearLabel;
@@ -295,6 +294,7 @@ namespace MapProject
         private Button satelliteSwitch;
         private Button zoomSwitch;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
+        private RichTextBox locationDescription;
     }
 }
 
