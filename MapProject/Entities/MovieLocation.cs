@@ -17,8 +17,8 @@ namespace MapProject
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string Photos { get; set; }
-        
-        public MovieLocation(string name, int year, string genre, string producer, string movieDescription, string locationDescription, string photos, double latitude, double longitude)
+
+        public MovieLocation(string name, string year, string genre, string producer, string movieDescription, string locationDescription, string photos, double latitude, double longitude)
         {
             Name = name;
             Year = year;
@@ -28,7 +28,7 @@ namespace MapProject
             LocationDescription = locationDescription;
             Photos = photos;
             Latitude = latitude;
-            Longitude = longitude;           
+            Longitude = longitude;
         }
 
     }

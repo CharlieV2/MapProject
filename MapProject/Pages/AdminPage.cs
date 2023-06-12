@@ -25,7 +25,7 @@ namespace MapProject.Pages
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            MapProject.MovieLocation location = new MapProject.MovieLocation(txtTitle.Text,
+            MovieLocation location = new MovieLocation(txtTitle.Text,
                                                        txtYear.Text,
                                                        txtGenre.Text,
                                                        txtProducer.Text,
