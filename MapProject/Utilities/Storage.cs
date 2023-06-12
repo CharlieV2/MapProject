@@ -11,18 +11,39 @@ namespace MapProject.Utilities
 {
     public static class Storage
     {
+        private static string _saveDirectoryName = "MapProject";
+        private static string _saveFileName = "Locations";
+        private static string _saveExtension = ".txt";
+
         public static void SaveLocations(List<MovieLocation> locations)
         {
+            string saveJson = JsonConvert.SerializeObject(locations, Formatting.Indented);
 
+            File.WriteAllText(GetSavePath(), saveJson);
         }
 
         public static List<MovieLocation> LoadLocations()
         {
-            List<MovieLocation> locations = new List<MovieLocation>();
+            if (File.Exists(GetSavePath()))
+            {
+                string loadJson = File.ReadAllText(GetSavePath());
+                List<MovieLocation> locations = JsonConvert.DeserializeObject<List<MovieLocation>>(loadJson);
 
+                return locations;
+            }
+            else
+            {
+                return new List<MovieLocation>();
+            }
+        }
 
-
-            return locations;
+        private static string GetSavePath()
+        {
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+                                ApplicationData),
+                                _saveDirectoryName,
+                                _saveFileName,
+                                _saveExtension);
         }
 
     }
