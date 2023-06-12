@@ -99,5 +99,32 @@ namespace MapProject.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на MapProject.
+        /// </summary>
+        internal static string SaveDirectoryName {
+            get {
+                return ResourceManager.GetString("SaveDirectoryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .txt.
+        /// </summary>
+        internal static string SaveExtension {
+            get {
+                return ResourceManager.GetString("SaveExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на LocationsInfo.
+        /// </summary>
+        internal static string SaveFileName {
+            get {
+                return ResourceManager.GetString("SaveFileName", resourceCulture);
+            }
+        }
     }
 }
