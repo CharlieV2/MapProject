@@ -38,6 +38,7 @@ namespace MapProject
         private void adminPanelButton_Click(object sender, EventArgs e)
         {
             adminPage.Visible = true;
+            // hello
         }
 
         private void search_TextChanged(object sender, EventArgs e)
