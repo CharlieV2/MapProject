@@ -32,10 +32,11 @@ namespace MapProject.Pages
                                                        txtMovieDescription.Text,
                                                        txtLocationDescription.Text,
                                                        txtPhotos.Text,
-                                                       double.Parse(txtLatitude.Text),
-                                                       double.Parse(txtLongitude.Text));
+                                                       double.Parse(txtLatitude.Text.Replace('.', ',')),
+                                                       double.Parse(txtLongitude.Text.Replace('.', ',')));
 
             MovieLocationsList.Add(location);
+            clearButton_Click(null, null);
         }
 
         private void clearButton_Click(object sender, EventArgs e)
