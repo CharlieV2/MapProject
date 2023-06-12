@@ -19,13 +19,16 @@ namespace MapProject.Utilities
 
         public static void SaveLocations(List<MovieLocation> locations)
         {
-            string saveJson = JsonConvert.SerializeObject(locations, Formatting.Indented);
+            DirectoryCheck();
 
+            string saveJson = JsonConvert.SerializeObject(locations, Formatting.Indented);            
             File.WriteAllText(GetSavePath(), saveJson);
         }
 
         public static List<MovieLocation> LoadLocations()
         {
+            DirectoryCheck();
+
             if (File.Exists(GetSavePath()))
             {
                 string loadJson = File.ReadAllText(GetSavePath());
@@ -42,9 +45,15 @@ namespace MapProject.Utilities
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
                                 ApplicationData),
                                 _saveDirectoryName,
-                                _saveLocationsFileName,
-                                _saveExtension);
+                                _saveLocationsFileName + _saveExtension);
         }
 
+        private static void DirectoryCheck()
+        {
+            if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), _saveDirectoryName)))
+            {
+                Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), _saveDirectoryName));
+            }
+        }
     }
 }

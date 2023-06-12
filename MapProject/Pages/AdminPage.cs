@@ -25,8 +25,8 @@ namespace MapProject.Pages
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            MovieLocation location = new MovieLocation(txtTitle.Text,
-                                                       int.Parse(txtYear.Text),
+            MapProject.MovieLocation location = new MapProject.MovieLocation(txtTitle.Text,
+                                                       txtYear.Text,
                                                        txtGenre.Text,
                                                        txtProducer.Text,
                                                        txtMovieDescription.Text,
@@ -35,7 +35,7 @@ namespace MapProject.Pages
                                                        double.Parse(txtLatitude.Text),
                                                        double.Parse(txtLongitude.Text));
 
-            GlobalVariables.MovieLocations.Add(location);
+            MovieLocationsList.Add(location);
         }
 
         private void clearButton_Click(object sender, EventArgs e)

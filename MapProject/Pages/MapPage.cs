@@ -21,13 +21,13 @@ namespace MapProject
         {
             InitializeComponent();
             InitializePages();
+            MovieLocationsList.Update();
             LoadData();
         }
 
         private void LoadData()
         {
-            GlobalVariables.MovieLocations = Storage.LoadLocations();
-            search.Items.AddRange(GlobalVariables.MovieLocations.Select(locations => locations.Name).ToArray());
+            search.Items.AddRange(MovieLocationsList.Get().Select(locations => locations.Name).ToArray());
         }
 
         private void adminPanelButton_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace MapProject
         {
             search.Items.Clear();
 
-            search.Items.AddRange(GlobalVariables.MovieLocations
+            search.Items.AddRange(MovieLocationsList.Get()
                 .Where(location => location.Name.IndexOf(search.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                 .Select(location => location.Name)
                 .ToArray());
@@ -55,7 +55,7 @@ namespace MapProject
 
         private void search_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MovieLocation movieLocation = GlobalVariables.MovieLocations.FirstOrDefault(loc => loc.Name.ToLower() == search.Text.ToLower());
+            MovieLocation movieLocation = MovieLocationsList.Get().FirstOrDefault(loc => loc.Name.ToLower() == search.Text.ToLower());
 
             if (movieLocation != null)
             {

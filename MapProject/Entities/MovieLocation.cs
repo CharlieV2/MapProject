@@ -9,7 +9,7 @@ namespace MapProject
     public class MovieLocation
     {
         public string Name { get; set; }
-        public int Year { get; set; }
+        public string Year { get; set; }
         public string Genre { get; set; }
         public string Producer { get; set; }
         public string MovieDescription { get; set; }

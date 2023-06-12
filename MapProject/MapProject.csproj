@@ -116,7 +116,6 @@
     <Compile Include="CustomControls\MySwitchButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MovieLocation.cs" />
     <Compile Include="Pages\AdminPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,7 +136,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\GlobalVariables.cs" />
+    <Compile Include="Utilities\MovieLocationsList.cs" />
     <Compile Include="Entities\MovieLocation.cs" />
     <Compile Include="Utilities\Storage.cs" />
     <EmbeddedResource Include="Pages\AdminPage.resx">
