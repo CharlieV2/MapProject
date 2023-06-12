@@ -11,7 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Yandex.Maps.StaticAPI;
 using Yandex.Maps.StaticAPI.PL;
 using Yandex.Maps.StaticAPI.PT;
-
+using MapProject.Utilities;
 
 namespace MapProject
 {
@@ -21,18 +21,13 @@ namespace MapProject
         {
             InitializeComponent();
             InitializePages();
-            FillData();
+            LoadData();
         }
 
-        List<MovieLocation> locations = new List<MovieLocation>();
-
-        private void FillData()
+        private void LoadData()
         {
-            locations.Add(new MovieLocation("Туман", 2023, "Драма", "Наталия Гугуева", "Кинооператор Настя отправляется вместе с метеорологом Андреем на труднодоступную северную метеостанцию, чтобы расследовать таинственное исчезновение со станции семейной пары метеорологов.", "Фильм снимался на Кольском полуострове в тундре на берегу Баренцева моря.", 69.201502, 35.107506));
-            locations.Add(new MovieLocation("Цена вопроса", 2022, "Короткометражка", "Григорий Шаханов", "Обыскивая заброшенную научную лабораторию в поисках лёгкой наживы, двое братьев находят загадочный прибор, открывающий путь к богатству. Но лишь одного из них устраивает цена вопроса…", "Фильм снимался в Мурманской области на Кольской сверхглубокой.", 69.44218200674243, 30.588536745013574));
-            locations.Add(new MovieLocation("Левиафан", 2015, "Драма", "Андрей Звягинцев", "В центре истории — живущий на севере Николай, который вместе с отцом построил дом и мастерскую. Но его нормальная жизнь рушится под влиянием судьбы.", "На данной локации находится скелет кита, показанный в фильме.", 69.168062, 35.133535));
-
-            search.Items.AddRange(locations.Select(locations => locations.Name).ToArray());
+            GlobalVariables.MovieLocations = Storage.LoadLocations();
+            search.Items.AddRange(GlobalVariables.MovieLocations.Select(locations => locations.Name).ToArray());
         }
 
         private void adminPanelButton_Click(object sender, EventArgs e)
@@ -44,7 +39,7 @@ namespace MapProject
         {
             search.Items.Clear();
 
-            search.Items.AddRange(locations
+            search.Items.AddRange(GlobalVariables.MovieLocations
                 .Where(location => location.Name.IndexOf(search.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                 .Select(location => location.Name)
                 .ToArray());
@@ -60,7 +55,7 @@ namespace MapProject
 
         private void search_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MovieLocation movieLocation = locations.FirstOrDefault(loc => loc.Name.ToLower() == search.Text.ToLower());
+            MovieLocation movieLocation = GlobalVariables.MovieLocations.FirstOrDefault(loc => loc.Name.ToLower() == search.Text.ToLower());
 
             if (movieLocation != null)
             {

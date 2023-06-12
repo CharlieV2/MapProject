@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MapProject.Properties;
 using Newtonsoft.Json;
 
@@ -12,8 +14,8 @@ namespace MapProject.Utilities
     public static class Storage
     {
         private static string _saveDirectoryName = "MapProject";
-        private static string _saveFileName = "Locations";
-        private static string _saveExtension = ".txt";
+        private static string _saveLocationsFileName = "Locations";
+        private static string _saveExtension = ".txt";    
 
         public static void SaveLocations(List<MovieLocation> locations)
         {
@@ -31,10 +33,8 @@ namespace MapProject.Utilities
 
                 return locations;
             }
-            else
-            {
-                return new List<MovieLocation>();
-            }
+
+            return new List<MovieLocation>();
         }
 
         private static string GetSavePath()
@@ -42,7 +42,7 @@ namespace MapProject.Utilities
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
                                 ApplicationData),
                                 _saveDirectoryName,
-                                _saveFileName,
+                                _saveLocationsFileName,
                                 _saveExtension);
         }
 

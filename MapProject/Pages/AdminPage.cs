@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MapProject.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,32 @@ namespace MapProject.Pages
         private void backButton_Click(object sender, EventArgs e)
         {
             Visible = false;
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            MovieLocation location = new MovieLocation(txtTitle.Text,
+                                                       int.Parse(txtYear.Text),
+                                                       txtGenre.Text,
+                                                       txtProducer.Text,
+                                                       txtMovieDescription.Text,
+                                                       txtLocationDescription.Text,
+                                                       txtPhotos.Text,
+                                                       double.Parse(txtLatitude.Text),
+                                                       double.Parse(txtLongitude.Text));
+
+            GlobalVariables.MovieLocations.Add(location);
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in panel1.Controls)
+            {
+                if (control is TextBoxBase textBox)
+                {
+                    textBox.Clear();
+                }
+            }
         }
     }
 }
