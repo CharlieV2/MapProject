@@ -70,26 +70,26 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addButton = new System.Windows.Forms.Button();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtGenre = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtProducer = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtMovieDescription = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtLocationDescription = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtPhotos = new System.Windows.Forms.TextBox();
-            this.clearButton = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txtLongitude = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtLatitude = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtPhotos = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtLocationDescription = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtMovieDescription = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtProducer = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtGenre = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.addButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,7 +100,7 @@
             // backButton
             // 
             this.backButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.backButton.Location = new System.Drawing.Point(3, 424);
+            this.backButton.Location = new System.Drawing.Point(4, 519);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(89, 33);
             this.backButton.TabIndex = 17;
@@ -543,166 +543,14 @@
             this.panel1.Controls.Add(this.addButton);
             this.panel1.Location = new System.Drawing.Point(4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(777, 413);
+            this.panel1.Size = new System.Drawing.Size(821, 508);
             this.panel1.TabIndex = 30;
-            // 
-            // addButton
-            // 
-            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.addButton.Location = new System.Drawing.Point(685, 377);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(89, 33);
-            this.addButton.TabIndex = 28;
-            this.addButton.Text = "Добавить";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtTitle.Location = new System.Drawing.Point(159, 41);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(180, 25);
-            this.txtTitle.TabIndex = 29;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label11.Location = new System.Drawing.Point(17, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 21);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Название фильма";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label12.Location = new System.Drawing.Point(119, 72);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 21);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Год";
-            // 
-            // txtYear
-            // 
-            this.txtYear.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtYear.Location = new System.Drawing.Point(159, 72);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(180, 25);
-            this.txtYear.TabIndex = 31;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label16.Location = new System.Drawing.Point(104, 107);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 21);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Жанр";
-            // 
-            // txtGenre
-            // 
-            this.txtGenre.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtGenre.Location = new System.Drawing.Point(159, 103);
-            this.txtGenre.Name = "txtGenre";
-            this.txtGenre.Size = new System.Drawing.Size(180, 25);
-            this.txtGenre.TabIndex = 33;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label18.Location = new System.Drawing.Point(73, 134);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 21);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "Режиссёр";
-            // 
-            // txtProducer
-            // 
-            this.txtProducer.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtProducer.Location = new System.Drawing.Point(157, 134);
-            this.txtProducer.Name = "txtProducer";
-            this.txtProducer.Size = new System.Drawing.Size(180, 25);
-            this.txtProducer.TabIndex = 35;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label19.Location = new System.Drawing.Point(14, 169);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(137, 21);
-            this.label19.TabIndex = 38;
-            this.label19.Text = "Описание фильма";
-            // 
-            // txtMovieDescription
-            // 
-            this.txtMovieDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtMovieDescription.Location = new System.Drawing.Point(159, 165);
-            this.txtMovieDescription.Multiline = true;
-            this.txtMovieDescription.Name = "txtMovieDescription";
-            this.txtMovieDescription.Size = new System.Drawing.Size(468, 88);
-            this.txtMovieDescription.TabIndex = 37;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label20.Location = new System.Drawing.Point(27, 263);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(124, 21);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "Описание места";
-            // 
-            // txtLocationDescription
-            // 
-            this.txtLocationDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtLocationDescription.Location = new System.Drawing.Point(159, 260);
-            this.txtLocationDescription.Multiline = true;
-            this.txtLocationDescription.Name = "txtLocationDescription";
-            this.txtLocationDescription.Size = new System.Drawing.Size(468, 88);
-            this.txtLocationDescription.TabIndex = 39;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label21.Location = new System.Drawing.Point(106, 354);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 21);
-            this.label21.TabIndex = 42;
-            this.label21.Text = "Фото";
-            // 
-            // txtPhotos
-            // 
-            this.txtPhotos.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPhotos.Location = new System.Drawing.Point(159, 354);
-            this.txtPhotos.Name = "txtPhotos";
-            this.txtPhotos.Size = new System.Drawing.Size(468, 25);
-            this.txtPhotos.TabIndex = 41;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.clearButton.Location = new System.Drawing.Point(685, 338);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(89, 33);
-            this.clearButton.TabIndex = 43;
-            this.clearButton.Text = "Очистить";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label22.Location = new System.Drawing.Point(375, 72);
+            this.label22.Location = new System.Drawing.Point(383, 86);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(66, 21);
             this.label22.TabIndex = 47;
@@ -711,7 +559,7 @@
             // txtLongitude
             // 
             this.txtLongitude.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtLongitude.Location = new System.Drawing.Point(447, 72);
+            this.txtLongitude.Location = new System.Drawing.Point(455, 86);
             this.txtLongitude.Name = "txtLongitude";
             this.txtLongitude.Size = new System.Drawing.Size(180, 25);
             this.txtLongitude.TabIndex = 46;
@@ -720,7 +568,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label23.Location = new System.Drawing.Point(376, 45);
+            this.label23.Location = new System.Drawing.Point(384, 59);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(65, 21);
             this.label23.TabIndex = 45;
@@ -729,10 +577,162 @@
             // txtLatitude
             // 
             this.txtLatitude.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtLatitude.Location = new System.Drawing.Point(447, 41);
+            this.txtLatitude.Location = new System.Drawing.Point(455, 55);
             this.txtLatitude.Name = "txtLatitude";
             this.txtLatitude.Size = new System.Drawing.Size(180, 25);
             this.txtLatitude.TabIndex = 44;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.clearButton.Location = new System.Drawing.Point(729, 433);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(89, 33);
+            this.clearButton.TabIndex = 43;
+            this.clearButton.Text = "Очистить";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label21.Location = new System.Drawing.Point(114, 368);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 21);
+            this.label21.TabIndex = 42;
+            this.label21.Text = "Фото";
+            // 
+            // txtPhotos
+            // 
+            this.txtPhotos.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPhotos.Location = new System.Drawing.Point(167, 368);
+            this.txtPhotos.Name = "txtPhotos";
+            this.txtPhotos.Size = new System.Drawing.Size(468, 25);
+            this.txtPhotos.TabIndex = 41;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label20.Location = new System.Drawing.Point(35, 277);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(124, 21);
+            this.label20.TabIndex = 40;
+            this.label20.Text = "Описание места";
+            // 
+            // txtLocationDescription
+            // 
+            this.txtLocationDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtLocationDescription.Location = new System.Drawing.Point(167, 274);
+            this.txtLocationDescription.Multiline = true;
+            this.txtLocationDescription.Name = "txtLocationDescription";
+            this.txtLocationDescription.Size = new System.Drawing.Size(468, 88);
+            this.txtLocationDescription.TabIndex = 39;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label19.Location = new System.Drawing.Point(22, 183);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(137, 21);
+            this.label19.TabIndex = 38;
+            this.label19.Text = "Описание фильма";
+            // 
+            // txtMovieDescription
+            // 
+            this.txtMovieDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtMovieDescription.Location = new System.Drawing.Point(167, 179);
+            this.txtMovieDescription.Multiline = true;
+            this.txtMovieDescription.Name = "txtMovieDescription";
+            this.txtMovieDescription.Size = new System.Drawing.Size(468, 88);
+            this.txtMovieDescription.TabIndex = 37;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label18.Location = new System.Drawing.Point(81, 148);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(78, 21);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "Режиссёр";
+            // 
+            // txtProducer
+            // 
+            this.txtProducer.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtProducer.Location = new System.Drawing.Point(165, 148);
+            this.txtProducer.Name = "txtProducer";
+            this.txtProducer.Size = new System.Drawing.Size(180, 25);
+            this.txtProducer.TabIndex = 35;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label16.Location = new System.Drawing.Point(112, 121);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 21);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Жанр";
+            // 
+            // txtGenre
+            // 
+            this.txtGenre.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtGenre.Location = new System.Drawing.Point(167, 117);
+            this.txtGenre.Name = "txtGenre";
+            this.txtGenre.Size = new System.Drawing.Size(180, 25);
+            this.txtGenre.TabIndex = 33;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label12.Location = new System.Drawing.Point(127, 86);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 21);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Год";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtYear.Location = new System.Drawing.Point(167, 86);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(180, 25);
+            this.txtYear.TabIndex = 31;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label11.Location = new System.Drawing.Point(25, 55);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(134, 21);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Название фильма";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtTitle.Location = new System.Drawing.Point(167, 55);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(180, 25);
+            this.txtTitle.TabIndex = 29;
+            // 
+            // addButton
+            // 
+            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.addButton.Location = new System.Drawing.Point(729, 472);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(89, 33);
+            this.addButton.TabIndex = 28;
+            this.addButton.Text = "Добавить";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // AdminPage
             // 
@@ -745,7 +745,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.backButton);
             this.Name = "AdminPage";
-            this.Size = new System.Drawing.Size(823, 460);
+            this.Size = new System.Drawing.Size(910, 555);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

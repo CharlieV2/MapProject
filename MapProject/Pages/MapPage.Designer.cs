@@ -42,6 +42,7 @@ namespace MapProject
         {
             this.label1 = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this.locationDescription = new System.Windows.Forms.RichTextBox();
             this.movieDescription = new System.Windows.Forms.RichTextBox();
             this.producerLabel = new System.Windows.Forms.Label();
             this.genreLabel = new System.Windows.Forms.Label();
@@ -49,13 +50,12 @@ namespace MapProject
             this.titleLabel = new System.Windows.Forms.Label();
             this.search = new System.Windows.Forms.ComboBox();
             this.adminPanelButton = new System.Windows.Forms.Button();
-            this.mapPicture = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.satelliteSwitch = new MapProject.CustomControls.MyCycleSwitchButton();
+            this.zoomSwitch = new MapProject.CustomControls.MyCycleSwitchButton();
             this.adminPage = new MapProject.Pages.AdminPage();
             this.authPage = new MapProject.Pages.AuthPage();
-            this.satelliteSwitch = new System.Windows.Forms.Button();
-            this.zoomSwitch = new System.Windows.Forms.Button();
-            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.locationDescription = new System.Windows.Forms.RichTextBox();
+            this.mapPicture = new System.Windows.Forms.PictureBox();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapPicture)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,15 @@ namespace MapProject
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Size = new System.Drawing.Size(351, 380);
             this.infoPanel.TabIndex = 6;
+            // 
+            // locationDescription
+            // 
+            this.locationDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.locationDescription.Location = new System.Drawing.Point(9, 244);
+            this.locationDescription.Name = "locationDescription";
+            this.locationDescription.Size = new System.Drawing.Size(339, 129);
+            this.locationDescription.TabIndex = 14;
+            this.locationDescription.Text = "Описание места съёмок";
             // 
             // movieDescription
             // 
@@ -138,16 +147,15 @@ namespace MapProject
             this.search.FormattingEnabled = true;
             this.search.Location = new System.Drawing.Point(84, 12);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(428, 25);
+            this.search.Size = new System.Drawing.Size(457, 25);
             this.search.TabIndex = 7;
             this.search.SelectedIndexChanged += new System.EventHandler(this.search_SelectedIndexChanged);
             this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
             // 
             // adminPanelButton
             // 
-            this.adminPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminPanelButton.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adminPanelButton.Location = new System.Drawing.Point(411, 359);
+            this.adminPanelButton.Location = new System.Drawing.Point(411, 357);
             this.adminPanelButton.Name = "adminPanelButton";
             this.adminPanelButton.Size = new System.Drawing.Size(130, 33);
             this.adminPanelButton.TabIndex = 0;
@@ -156,20 +164,51 @@ namespace MapProject
             this.adminPanelButton.UseVisualStyleBackColor = true;
             this.adminPanelButton.Click += new System.EventHandler(this.adminPanelButton_Click);
             // 
-            // mapPicture
+            // flowLayoutPanel1
             // 
-            this.mapPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mapPicture.Location = new System.Drawing.Point(12, 43);
-            this.mapPicture.Name = "mapPicture";
-            this.mapPicture.Size = new System.Drawing.Size(529, 349);
-            this.mapPicture.TabIndex = 8;
-            this.mapPicture.TabStop = false;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 398);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(886, 145);
+            this.flowLayoutPanel1.TabIndex = 15;
+            this.flowLayoutPanel1.TabStop = true;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // satelliteSwitch
+            // 
+            this.satelliteSwitch.BaseText = "Спутник:";
+            this.satelliteSwitch.CurrentIndex = 0;
+            this.satelliteSwitch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.satelliteSwitch.Location = new System.Drawing.Point(12, 357);
+            this.satelliteSwitch.Name = "satelliteSwitch";
+            this.satelliteSwitch.Size = new System.Drawing.Size(130, 33);
+            this.satelliteSwitch.TabIndex = 14;
+            this.satelliteSwitch.Text = "Спутник: Выкл";
+            this.satelliteSwitch.UseVisualStyleBackColor = true;
+            this.satelliteSwitch.Values = "Выкл;Вкл";
+            this.satelliteSwitch.Click += new System.EventHandler(this.satelliteSwitch_Click);
+            // 
+            // zoomSwitch
+            // 
+            this.zoomSwitch.BaseText = "Увеличение:";
+            this.zoomSwitch.CurrentIndex = 1;
+            this.zoomSwitch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.zoomSwitch.Location = new System.Drawing.Point(148, 357);
+            this.zoomSwitch.Name = "zoomSwitch";
+            this.zoomSwitch.Size = new System.Drawing.Size(130, 33);
+            this.zoomSwitch.TabIndex = 13;
+            this.zoomSwitch.Text = "Увеличение: 5";
+            this.zoomSwitch.UseVisualStyleBackColor = true;
+            this.zoomSwitch.Values = "3;5;7;9;11;13;15";
+            this.zoomSwitch.Click += new System.EventHandler(this.zoomSwitch_Click);
             // 
             // adminPage
             // 
             this.adminPage.Location = new System.Drawing.Point(0, 0);
             this.adminPage.Name = "adminPage";
-            this.adminPage.Size = new System.Drawing.Size(823, 460);
+            this.adminPage.Size = new System.Drawing.Size(910, 555);
             this.adminPage.TabIndex = 0;
             this.adminPage.Visible = false;
             // 
@@ -177,80 +216,27 @@ namespace MapProject
             // 
             this.authPage.Location = new System.Drawing.Point(0, 0);
             this.authPage.Name = "authPage";
-            this.authPage.Size = new System.Drawing.Size(823, 460);
+            this.authPage.Size = new System.Drawing.Size(910, 555);
             this.authPage.TabIndex = 0;
             // 
-            // satelliteSwitch
+            // mapPicture
             // 
-            this.satelliteSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.satelliteSwitch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.satelliteSwitch.Location = new System.Drawing.Point(12, 359);
-            this.satelliteSwitch.Name = "satelliteSwitch";
-            this.satelliteSwitch.Size = new System.Drawing.Size(130, 33);
-            this.satelliteSwitch.TabIndex = 9;
-            this.satelliteSwitch.TabStop = false;
-            this.satelliteSwitch.Text = "Спутник: Выкл";
-            this.satelliteSwitch.UseVisualStyleBackColor = true;
-            this.satelliteSwitch.Click += new System.EventHandler(this.satelliteSwitch_Click);
-            // 
-            // zoomSwitch
-            // 
-            this.zoomSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.zoomSwitch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.zoomSwitch.Location = new System.Drawing.Point(202, 359);
-            this.zoomSwitch.Name = "zoomSwitch";
-            this.zoomSwitch.Size = new System.Drawing.Size(130, 33);
-            this.zoomSwitch.TabIndex = 10;
-            this.zoomSwitch.TabStop = false;
-            this.zoomSwitch.Text = "Zoom: 7";
-            this.zoomSwitch.UseVisualStyleBackColor = true;
-            this.zoomSwitch.Click += new System.EventHandler(this.zoomSwitch_Click);
-            // 
-            // gMapControl1
-            // 
-            this.gMapControl1.Bearing = 0F;
-            this.gMapControl1.CanDragMap = true;
-            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapControl1.GrayScaleMode = false;
-            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(17, 43);
-            this.gMapControl1.MarkersEnabled = true;
-            this.gMapControl1.MaxZoom = 2;
-            this.gMapControl1.MinZoom = 2;
-            this.gMapControl1.MouseWheelZoomEnabled = true;
-            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapControl1.Name = "gMapControl1";
-            this.gMapControl1.NegativeMode = false;
-            this.gMapControl1.PolygonsEnabled = true;
-            this.gMapControl1.RetryLoadTile = 0;
-            this.gMapControl1.RoutesEnabled = true;
-            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(500, 278);
-            this.gMapControl1.TabIndex = 14;
-            this.gMapControl1.Zoom = 0D;
-            // 
-            // locationDescription
-            // 
-            this.locationDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.locationDescription.Location = new System.Drawing.Point(9, 244);
-            this.locationDescription.Name = "locationDescription";
-            this.locationDescription.Size = new System.Drawing.Size(339, 129);
-            this.locationDescription.TabIndex = 14;
-            this.locationDescription.Text = "Описание места съёмок";
+            this.mapPicture.Location = new System.Drawing.Point(12, 43);
+            this.mapPicture.Name = "mapPicture";
+            this.mapPicture.Size = new System.Drawing.Size(529, 308);
+            this.mapPicture.TabIndex = 11;
+            this.mapPicture.TabStop = false;
             // 
             // MapPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 555);
-            this.Controls.Add(this.gMapControl1);
-            this.Controls.Add(this.zoomSwitch);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.satelliteSwitch);
-            this.Controls.Add(this.adminPanelButton);
+            this.Controls.Add(this.zoomSwitch);
             this.Controls.Add(this.mapPicture);
+            this.Controls.Add(this.adminPanelButton);
             this.Controls.Add(this.search);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.label1);
@@ -290,11 +276,11 @@ namespace MapProject
         private Label titleLabel;
         private ComboBox search;
         private Button adminPanelButton;
-        private PictureBox mapPicture;
-        private Button satelliteSwitch;
-        private Button zoomSwitch;
-        private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private RichTextBox locationDescription;
+        private PictureBox mapPicture;
+        private CustomControls.MyCycleSwitchButton zoomSwitch;
+        private CustomControls.MyCycleSwitchButton satelliteSwitch;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

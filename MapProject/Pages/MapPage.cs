@@ -70,14 +70,12 @@ namespace MapProject
             }
         }
 
-
-
         private string GetMap(double latitude, double longitude)
         {
             L l = new L(true, satellite, false, false);
             LL ll = new LL(latitude, longitude);
 
-            Yandex.Maps.StaticAPI.Size size = new Yandex.Maps.StaticAPI.Size(405, 500);
+            Yandex.Maps.StaticAPI.Size size = new Yandex.Maps.StaticAPI.Size(mapPicture.Height, mapPicture.Width);
             Lang lang = new Lang(Lang.Lang_reg.ru_RU);
 
 
@@ -116,27 +114,8 @@ namespace MapProject
 
         private void zoomSwitch_Click(object sender, EventArgs e)
         {
-            switch (zoom)
-            {
-                case 5:
-                    zoomSwitch.Text = "Zoom: 7";
-                    zoom = 7;
-                    break;
-                case 7:
-                    zoomSwitch.Text = "Zoom: 10";
-                    zoom = 10;
-                    break;
-                case 10:
-                    zoomSwitch.Text = "Zoom: 5";
-                    zoom = 5;
-                    break;
-                default:
-                    zoomSwitch.Text = "Zoom: 7";
-                    zoom = 7;
-                    break;
-
-            }
-
+            zoom = int.Parse(zoomSwitch.GetCurrentValue());
+    
             search_SelectedIndexChanged(null, null);
         }
     }
