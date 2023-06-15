@@ -159,6 +159,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\DynamicCreator.cs" />
     <Compile Include="Utilities\MovieLocationsList.cs" />
     <Compile Include="Utilities\Storage.cs" />
     <EmbeddedResource Include="Pages\AdminPage.resx">
@@ -172,14 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,6 +224,66 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TS7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

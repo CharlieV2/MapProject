@@ -50,12 +50,12 @@ namespace MapProject
             this.titleLabel = new System.Windows.Forms.Label();
             this.search = new System.Windows.Forms.ComboBox();
             this.adminPanelButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.photosPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.mapPicture = new System.Windows.Forms.PictureBox();
             this.satelliteSwitch = new MapProject.CustomControls.MyCycleSwitchButton();
             this.zoomSwitch = new MapProject.CustomControls.MyCycleSwitchButton();
             this.adminPage = new MapProject.Pages.AdminPage();
             this.authPage = new MapProject.Pages.AuthPage();
-            this.mapPicture = new System.Windows.Forms.PictureBox();
             this.infoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapPicture)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +88,7 @@ namespace MapProject
             this.locationDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.locationDescription.Location = new System.Drawing.Point(9, 244);
             this.locationDescription.Name = "locationDescription";
+            this.locationDescription.ReadOnly = true;
             this.locationDescription.Size = new System.Drawing.Size(339, 129);
             this.locationDescription.TabIndex = 14;
             this.locationDescription.Text = "Описание места съёмок";
@@ -97,6 +98,7 @@ namespace MapProject
             this.movieDescription.Font = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.movieDescription.Location = new System.Drawing.Point(9, 109);
             this.movieDescription.Name = "movieDescription";
+            this.movieDescription.ReadOnly = true;
             this.movieDescription.Size = new System.Drawing.Size(339, 129);
             this.movieDescription.TabIndex = 13;
             this.movieDescription.Text = "Описание фильма";
@@ -164,17 +166,25 @@ namespace MapProject
             this.adminPanelButton.UseVisualStyleBackColor = true;
             this.adminPanelButton.Click += new System.EventHandler(this.adminPanelButton_Click);
             // 
-            // flowLayoutPanel1
+            // photosPanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 398);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(886, 145);
-            this.flowLayoutPanel1.TabIndex = 15;
-            this.flowLayoutPanel1.TabStop = true;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.photosPanel.AutoScroll = true;
+            this.photosPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.photosPanel.Location = new System.Drawing.Point(12, 398);
+            this.photosPanel.Name = "photosPanel";
+            this.photosPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.photosPanel.Size = new System.Drawing.Size(886, 145);
+            this.photosPanel.TabIndex = 15;
+            this.photosPanel.TabStop = true;
+            this.photosPanel.WrapContents = false;
+            // 
+            // mapPicture
+            // 
+            this.mapPicture.Location = new System.Drawing.Point(12, 43);
+            this.mapPicture.Name = "mapPicture";
+            this.mapPicture.Size = new System.Drawing.Size(529, 308);
+            this.mapPicture.TabIndex = 11;
+            this.mapPicture.TabStop = false;
             // 
             // satelliteSwitch
             // 
@@ -219,20 +229,12 @@ namespace MapProject
             this.authPage.Size = new System.Drawing.Size(910, 555);
             this.authPage.TabIndex = 0;
             // 
-            // mapPicture
-            // 
-            this.mapPicture.Location = new System.Drawing.Point(12, 43);
-            this.mapPicture.Name = "mapPicture";
-            this.mapPicture.Size = new System.Drawing.Size(529, 308);
-            this.mapPicture.TabIndex = 11;
-            this.mapPicture.TabStop = false;
-            // 
             // MapPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 555);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.photosPanel);
             this.Controls.Add(this.satelliteSwitch);
             this.Controls.Add(this.zoomSwitch);
             this.Controls.Add(this.mapPicture);
@@ -280,7 +282,7 @@ namespace MapProject
         private PictureBox mapPicture;
         private CustomControls.MyCycleSwitchButton zoomSwitch;
         private CustomControls.MyCycleSwitchButton satelliteSwitch;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel photosPanel;
     }
 }
 

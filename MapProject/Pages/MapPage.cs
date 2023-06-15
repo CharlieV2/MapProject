@@ -12,6 +12,9 @@ using Yandex.Maps.StaticAPI;
 using Yandex.Maps.StaticAPI.PL;
 using Yandex.Maps.StaticAPI.PT;
 using MapProject.Utilities;
+using System.Resources;
+using MapProject.CustomControls;
+using Size = System.Drawing.Size;
 
 namespace MapProject
 {
@@ -67,6 +70,33 @@ namespace MapProject
                 locationDescription.Text = movieLocation.LocationDescription;
 
                 mapPicture.Load(GetMap(movieLocation.Latitude, movieLocation.Longitude));
+                GetPhotos(movieLocation.Photos);
+            }
+        }
+
+
+        private void GetPhotos(string photos)
+        {
+            photosPanel.Controls.Clear();
+
+            // Получаем текущую сборку
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+            // Создаем ResourceManager для текущей сборки
+            var resourceManager = new ResourceManager(assembly.GetName().Name + ".Properties.Resources", assembly);
+
+            string[] photosArray = photos.Split(';');
+            Size size = new Size(136, 136);
+
+            if (photosArray.Length > 6)
+            {
+                size = new Size(136, 120);
+            }
+
+            foreach (string item in photosArray)
+            {
+                MyClickablePictureBox pictureBox = DynamicCreator.CreateClickablePictureBox((Image)resourceManager.GetObject(item), size);
+                photosPanel.Controls.Add(pictureBox);
             }
         }
 
