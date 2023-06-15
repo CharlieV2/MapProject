@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(379, 77);
+            this.label1.Location = new System.Drawing.Point(433, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 37);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // guestLoginButton
             // 
             this.guestLoginButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.guestLoginButton.Location = new System.Drawing.Point(343, 346);
+            this.guestLoginButton.Location = new System.Drawing.Point(397, 371);
             this.guestLoginButton.Name = "guestLoginButton";
             this.guestLoginButton.Size = new System.Drawing.Size(136, 42);
             this.guestLoginButton.TabIndex = 4;
@@ -65,7 +65,7 @@
             // adminLoginButton
             // 
             this.adminLoginButton.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.adminLoginButton.Location = new System.Drawing.Point(343, 234);
+            this.adminLoginButton.Location = new System.Drawing.Point(397, 259);
             this.adminLoginButton.Name = "adminLoginButton";
             this.adminLoginButton.Size = new System.Drawing.Size(136, 42);
             this.adminLoginButton.TabIndex = 3;
@@ -75,7 +75,7 @@
             // username
             // 
             this.username.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.username.Location = new System.Drawing.Point(311, 130);
+            this.username.Location = new System.Drawing.Point(365, 155);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(203, 25);
             this.username.TabIndex = 1;
@@ -83,7 +83,7 @@
             // password
             // 
             this.password.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password.Location = new System.Drawing.Point(311, 178);
+            this.password.Location = new System.Drawing.Point(365, 203);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(203, 25);
             this.password.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label2.Location = new System.Drawing.Point(167, 130);
+            this.label2.Location = new System.Drawing.Point(221, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 21);
             this.label2.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label3.Location = new System.Drawing.Point(243, 178);
+            this.label3.Location = new System.Drawing.Point(297, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 21);
             this.label3.TabIndex = 6;
@@ -113,7 +113,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 15F);
-            this.label4.Location = new System.Drawing.Point(390, 298);
+            this.label4.Location = new System.Drawing.Point(444, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 28);
             this.label4.TabIndex = 7;
@@ -122,7 +122,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(343, 316);
+            this.panel1.Location = new System.Drawing.Point(397, 341);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(136, 1);
             this.panel1.TabIndex = 8;
@@ -130,7 +130,7 @@
             // hidePasswordSwitch
             // 
             this.hidePasswordSwitch.Image = global::MapProject.Properties.Resources.restrictEye_Default;
-            this.hidePasswordSwitch.Location = new System.Drawing.Point(520, 178);
+            this.hidePasswordSwitch.Location = new System.Drawing.Point(574, 203);
             this.hidePasswordSwitch.Name = "hidePasswordSwitch";
             this.hidePasswordSwitch.Size = new System.Drawing.Size(24, 24);
             this.hidePasswordSwitch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +158,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "AuthPage";
-            this.Size = new System.Drawing.Size(823, 460);
+            this.Size = new System.Drawing.Size(910, 555);
             ((System.ComponentModel.ISupportInitialize)(this.hidePasswordSwitch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

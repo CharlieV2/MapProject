@@ -12,6 +12,9 @@ using Yandex.Maps.StaticAPI;
 using Yandex.Maps.StaticAPI.PL;
 using Yandex.Maps.StaticAPI.PT;
 using MapProject.Utilities;
+using System.Resources;
+using MapProject.CustomControls;
+using Size = System.Drawing.Size;
 
 namespace MapProject
 {
@@ -67,17 +70,42 @@ namespace MapProject
                 locationDescription.Text = movieLocation.LocationDescription;
 
                 mapPicture.Load(GetMap(movieLocation.Latitude, movieLocation.Longitude));
+                GetPhotos(movieLocation.Photos);
             }
         }
 
 
+        private void GetPhotos(string photos)
+        {
+            photosPanel.Controls.Clear();
+
+            // Получаем текущую сборку
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+            // Создаем ResourceManager для текущей сборки
+            var resourceManager = new ResourceManager(assembly.GetName().Name + ".Properties.Resources", assembly);
+
+            string[] photosArray = photos.Split(';');
+            Size size = new Size(136, 136);
+
+            if (photosArray.Length > 6)
+            {
+                size = new Size(136, 120);
+            }
+
+            foreach (string item in photosArray)
+            {
+                MyClickablePictureBox pictureBox = DynamicCreator.CreateClickablePictureBox((Image)resourceManager.GetObject(item), size);
+                photosPanel.Controls.Add(pictureBox);
+            }
+        }
 
         private string GetMap(double latitude, double longitude)
         {
             L l = new L(true, satellite, false, false);
             LL ll = new LL(latitude, longitude);
 
-            Yandex.Maps.StaticAPI.Size size = new Yandex.Maps.StaticAPI.Size(405, 500);
+            Yandex.Maps.StaticAPI.Size size = new Yandex.Maps.StaticAPI.Size(mapPicture.Height, mapPicture.Width);
             Lang lang = new Lang(Lang.Lang_reg.ru_RU);
 
 
@@ -116,27 +144,8 @@ namespace MapProject
 
         private void zoomSwitch_Click(object sender, EventArgs e)
         {
-            switch (zoom)
-            {
-                case 5:
-                    zoomSwitch.Text = "Zoom: 7";
-                    zoom = 7;
-                    break;
-                case 7:
-                    zoomSwitch.Text = "Zoom: 10";
-                    zoom = 10;
-                    break;
-                case 10:
-                    zoomSwitch.Text = "Zoom: 5";
-                    zoom = 5;
-                    break;
-                default:
-                    zoomSwitch.Text = "Zoom: 7";
-                    zoom = 7;
-                    break;
-
-            }
-
+            zoom = int.Parse(zoomSwitch.GetCurrentValue());
+    
             search_SelectedIndexChanged(null, null);
         }
     }
